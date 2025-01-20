@@ -12,19 +12,19 @@
 }
 
 ### Type selectors
-'''
+``` 
 <!-- index.html -->
 
 <div>Hello, World!</div>
 <div>Hello again!</div>
 <p>Hi...</p>
 <div>Okay, bye.</div>
-'''
+``` 
 
-'''
+``` 
 /* styles.css */
 
 div {
   color: white;
 }
-'''
+``` 
