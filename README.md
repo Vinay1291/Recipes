@@ -1,4 +1,4 @@
 # Recipes
 ## CSS 
 
-[cssProp01](./images/cssProp01.jpg)
+![cssProp01](./images/cssProp01.jpg)
