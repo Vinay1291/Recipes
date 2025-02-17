@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Index</title>
-    <link rel="stylesheet" href="stylesheets/styles01.css"> <!-- Link to an external CSS file -->
+    <link rel="stylesheet" href="stylesheets/styles01.css" id="theme-link"> <!-- Link to external CSS file -->
 </head>
+
 <body>
+
+    <div class="toggle-theme" onclick="switchTheme()"
+        style="text-align: center; color: aliceblue; height: 40px; background-color: black; margin: 0; cursor: pointer;">
+        Click here to change color/ theme.
+    </div>
+
     <header>
         <h1>Recipe Index</h1>
     </header>
+
     <main>
         <section class="recipe-list">
             <div class="recipe-card">
@@ -30,7 +39,7 @@
                 <img src="images/ChocolateCake.jpeg" alt="Chocolate Cake">
                 <h3>Chocolate Cake</h3>
                 <p>Rich and moist chocolate cake with a glossy frosting.</p>
-                <a href="recipes/choclate-Cake.html">View Recipe</a>
+                <a href="recipes/chocolate-Cake.html">View Recipe</a>
             </div>
 
             <div class="recipe-card">
@@ -41,5 +50,24 @@
             </div>
         </section>
     </main>
+
+    <script>
+        function switchTheme() {
+            const themeLink = document.getElementById('theme-link');
+            const currentTheme = themeLink.getAttribute("href");
+
+            let newTheme;
+            if (currentTheme.includes("styles01.css")) {
+                newTheme = "stylesheets/styles02.css";
+            } else if (currentTheme.includes("styles02.css")) {
+                newTheme = "stylesheets/styles.css";
+            } else {
+                newTheme = "stylesheets/styles01.css"; // Default to first theme
+            }
+
+            themeLink.setAttribute("href", newTheme);
+        }
+    </script>
 </body>
+
 </html>
